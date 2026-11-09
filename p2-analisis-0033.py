@@ -24,4 +24,28 @@ print(grouped['Metros_Cuadrados'].mean())
 print("\n--- Precio Máximo por cantidad de habitaciones Keyla Paola NC = 0033 ---")
 print(grouped['Precio_Miles_USD'].max())
 
-print("Keyla Paola NC = 0033 | Fecha 6/noviembre/2026)")
+print("   ")
+print("----Keyla Paola --- Segunda Parte----- 0033")
+print("  ")
+print("*-*-*-*Agregaciones múltiples*-*-*-*")
+print("mean --> promedio, sum --> suma")
+print("max --> maximo,min --> minimo")
+# Multiple aggregation functions
+resultado_agregado = grouped['Habitaciones'].agg(['mean', 'sum', 'max', 'min'])
+print(resultado_agregado)
+print("  ")
+print("--- Agrupacion por varias columnas ---")
+print("Agrega columna al DataFrame")
+print("columna Team --> Equipo")
+df['Equipo'] = ['A','B','A','B','A','B']
+grouped_multi = df.groupby(['Metros_Cuadrados', 'Equipo'])['Precio_Miles_USD'].mean()
+print(grouped_multi)
+
+
+
+
+
+
+
+
+print("Keyla Paola NC = 0033 | Fecha 9/noviembre/2026)")
